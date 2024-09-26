@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./CSS/index.css" />
+    <script
+      src="https://kit.fontawesome.com/7a5a56048c.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Gamehub</title>
   </head>
   <body>
@@ -23,10 +27,15 @@
         </nav>
       </div>
       <div id="members-menu">
-        <ul>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Register</a></li>
-        </ul>
+        <div id="shopping-cart">
+          <i class="fa-solid icon fa-cart-shopping"></i>
+        </div>
+        <div id="members-menu-links">
+          <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <!-- MAIN SECTION -->
@@ -163,12 +172,15 @@
           </div>
         </div>
       </section>
+      <div id="promotion-section-button">
+        <a href="#" class="promotion-section-button-text">Browse All Games</a>
+      </div>
       <!-- MEMBERS SECTION -->
       <section id="members-info-section">
         <div id="members-section-title">
           <h2>Become a member - enjoy the benefits!</h2>
         </div>
-        <div id="members-section-body">
+        <div class="members-section-body">
           <div class="members-section-card">
             <div class="members-section-card-title">
               <h3>Free Shipping</h3>
@@ -219,20 +231,29 @@
           </div>
         </div>
         <div id="members-section-button">
-          <a href="#" class="members-section-button">Become a member</a>
+          <a href="#" class="members-section-button-text">Become a member</a>
         </div>
       </section>
       <!-- FOOTER SECTION -->
       <footer>
-        <div id="footer-socials"></div>
+        <div id="footer-socials">
+          <a href="#"><i class="fa-brands footer-icon fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands footer-icon fa-twitch"></i></a>
+          <a href="#"><i class="fa-brands footer-icon fa-facebook"></i></a>
+          <a href="#"
+            ><i class="fa-brands footer-icon fa-square-instagram"></i
+          ></a>
+        </div>
         <div id="footer-nav">
           <div id="footer-nav-heading">
-            <h2>Game Hub © 2024 - All Rights Reserved</h2>
+            <h3>Game Hub © 2024 - All Rights Reserved</h3>
           </div>
           <div id="footer-nav-links">
             <ul>
               <li><a href="#">Terms Of Services</a></li>
+              |
               <li><a href="#">Legal Notice</a></li>
+              |
               <li><a href="#">Cookie Policy</a></li>
             </ul>
           </div>
@@ -243,12 +264,13 @@
           </div>
           <form action="#" method="post">
             <input
+              id="email-input"
               type="email"
               name="email"
               id="email"
               placeholder="Enter your email"
             />
-            <input type="submit" value="Subscribe" />
+            <input id="newsletter-button" type="submit" value="Subscribe" />
           </form>
         </div>
       </footer>
