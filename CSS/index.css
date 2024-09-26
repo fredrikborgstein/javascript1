@@ -252,6 +252,11 @@ header ul li a {
   width: 100%;
 }
 
+.member-icon {
+  font-size: 4rem;
+  padding-right: 10px;
+}
+
 footer {
   color: white;
   display: flex;
