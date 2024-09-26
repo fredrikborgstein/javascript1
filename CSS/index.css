@@ -67,7 +67,8 @@ header ul li a {
   align-items: center;
   flex-direction: column;
   height: 60vh;
-  background: url(" ../Images/GameHubcovers9.jpg") no-repeat center/cover;
+  background: url(https://utfs.io/f/CPkGyyZpEykHUqBCwtIJtc8QBmWdxY7ja4yXpG1szUwE02KC)
+    no-repeat center/cover;
   background-position: center 36%;
   position: relative;
 }
