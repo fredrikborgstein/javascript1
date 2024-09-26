@@ -76,7 +76,7 @@ This project is part of the **Front-End Development** curriculum at Noroff Unive
 
 ## Resources & References
 
-- [Noroff University College Learning Platform](https://www.noroff.no/)
+- [Noroff University College Learning Platform](https://www.noroff.no/studier/fagskole/frontend-utvikling)
 - [MDN Web Docs - HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [MDN Web Docs - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [W3C Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)
@@ -85,20 +85,13 @@ This project is part of the **Front-End Development** curriculum at Noroff Unive
 
 ## Author
 
-- **Your Name**
-- Student at Noroff University College, Front-End Development Course
+- **Fredrik Borgstein**
+- Student at Noroff University College, Front-End Development
 
 ---
 
 ## License
 
 This project is for educational purposes only and is not licensed for commercial use.
-
----
-
-### Final Notes:
-
-- Remember to validate your HTML and CSS using [W3C Validators](https://validator.w3.org/).
-- Test the responsiveness of your design across different devices and browsers.
 
 ---
