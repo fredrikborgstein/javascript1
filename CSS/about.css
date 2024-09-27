@@ -1,0 +1,12 @@
+#about-section-divider {
+  border-bottom: 4px solid white;
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-image {
+  width: 509px;
+}
