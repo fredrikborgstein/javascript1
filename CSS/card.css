@@ -1,0 +1,60 @@
+.members-section-card,
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: #1b203d;
+  margin-bottom: 20px;
+}
+
+.card-image img {
+  width: 130px;
+}
+.card-title,
+.members-section-card-title {
+  font-size: 1rem;
+  margin: 10px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card p {
+  display: inline-block;
+  margin: 10px;
+}
+
+/* TODO: Fix text alignment inside the button */
+
+.card-button,
+#members-section-button,
+#promotion-section-button {
+  padding: 5px 10px;
+  background-color: #cfa616;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  filter: drop-shadow(2px 2px 6px #000000);
+}
+
+.card-button:hover,
+#members-section-button:hover,
+#promotion-section-button:hover {
+  background-color: #f7d7a9;
+}
+
+.card-text,
+.members-section-button-text,
+.promotion-section-button-text {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
