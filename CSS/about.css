@@ -1,3 +1,9 @@
+#title-section {
+  width: full;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
 #about-section-divider {
   border-bottom: 4px solid white;
 }
@@ -9,4 +15,10 @@
 
 .about-image {
   width: 509px;
+}
+
+#about-section-1,
+#about-section-2,
+#title-section {
+  color: white;
 }
