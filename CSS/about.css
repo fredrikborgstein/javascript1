@@ -6,6 +6,7 @@
 
 #about-section-divider {
   border-bottom: 4px solid white;
+  margin: 20px 0;
 }
 
 .about-section {
@@ -21,4 +22,32 @@
 #about-section-2,
 #title-section {
   color: white;
+}
+
+#about-section-2 {
+  padding-bottom: 40px;
+}
+
+.right-about-section ul {
+  list-style: none;
+}
+
+.right-about-section ul li {
+  margin-bottom: 10px;
+}
+
+.right-about-section ul li span {
+  font-weight: bold;
+}
+
+.right-about-section h3 {
+  margin-bottom: 20px;
+}
+
+.right-about-section {
+  margin-left: 20px;
+}
+
+.left-about-section {
+  margin-right: 20px;
 }
