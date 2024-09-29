@@ -25,11 +25,26 @@ This project is part of the **Front-End Development** curriculum at Noroff Unive
 ## Project Structure
 
 ```bash
-|-- /assets           # Images, fonts, and other assets
-|-- /css              # Custom stylesheets
-|   |-- styles.css    # Main CSS file
-|-- /index.html       # Main HTML file
-|-- README.md         # This file
+|-- /images                 # Images
+|-- /legal                  # Subpages concerning legals, cookies, and terms
+|   |-- cookiepolicy.html   # HTML-File for Cookie Policy page
+|   |-- legalnotice.html    # HTML-File for Legal Notice page
+|   |-- termsofservice.html # HTML-File for Terms of Service page
+|-- /css                    # Custom stylesheets
+|   |-- site-wide.css       # Main CSS file - covers a lot of common CSS across pages
+|   |-- index.css           # CSS file for Homepage
+|   |-- about.css           # CSS file for About page
+|   |-- allproducts.css     # CSS file for All Products page
+|   |-- card.css            # CSS file for cards used across the website
+|   |-- legalnotice.css     # CSS file for the legal pages in /legal
+|   |-- contact.css         # CSS file for Contact page
+|   |-- productpage.css     # CSS file for the Product page
+|-- /index.html             # Main HTML file
+|-- /about.html             # HTML file for About page
+|-- /contact.html           # HTML file for Contact page
+|-- /allproducts.html       # HTML file for All Products page
+|-- /productpage.html       # HTML file for Product page
+|-- README.md               # This file
 ```
 
 ## How to Run the Project
