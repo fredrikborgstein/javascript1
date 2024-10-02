@@ -109,3 +109,22 @@ p {
 #cart-product-remove .fa-solid {
   padding-right: 10px;
 }
+
+#cart-notification {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+
+  background: red;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+}
+
+#shopping-cart {
+  position: relative;
+}
