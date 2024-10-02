@@ -72,7 +72,8 @@ p {
   align-items: center;
 }
 
-#cart-empty-button {
+#cart-empty-button,
+#checkout-btn {
   margin-top: 20px;
   padding: 5px 10px;
   background-color: #cfa616;
@@ -84,7 +85,27 @@ p {
   filter: drop-shadow(2px 2px 6px #000000);
 }
 
-#cart-empty-button:hover {
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#cart-items p {
+  font-size: 12px;
+}
+
+#cart-empty-button:hover,
+#checkout-btn:hover {
   background-color: #f7d7a9;
   cursor: pointer;
+}
+
+#cart-product-remove a {
+  color: white;
+  text-decoration: none;
+}
+
+#cart-product-remove .fa-solid {
+  padding-right: 10px;
 }
