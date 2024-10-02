@@ -1,0 +1,10 @@
+:root {
+  // Colors
+  --background-color: #f0f0f0;
+  --primary-text-color: #333;
+  --secondary-text-color: #666;
+  --button-color: #f0f0f0;
+
+  // Margins & Paddings
+  --section-margin: 40px;
+}
