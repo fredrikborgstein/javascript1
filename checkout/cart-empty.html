@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/site-wide.css" />
-    <link rel="stylesheet" href="../CSS/cart-empty.css" />
+    <link rel="stylesheet" href="../CSS/cart.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -58,17 +58,19 @@
         <h1>Shopping Cart</h1>
       </section>
       <section id="cart">
-        <div id="cart-content">
+        <div id="cart-content-empty">
           <h4>
             You don’t seem to have added anything to your shopping cart. Feel
             <br />free to browse our products!
           </h4>
-          <button
-            id="cart-empty-button"
-            onclick="window.location.href='../allproducts.html'"
-          >
-            Browse Products
-          </button>
+          <div id="empty-button">
+            <button
+              id="cart-empty-button"
+              onclick="window.location.href='../allproducts.html'"
+            >
+              Browse Products
+            </button>
+          </div>
         </div>
         <div id="cart-summary">
           <div id="cart-summary-heading">

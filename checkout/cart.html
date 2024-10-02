@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/site-wide.css" />
+    <link rel="stylesheet" href="../CSS/cart.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +15,7 @@
       src="https://kit.fontawesome.com/7a5a56048c.js"
       crossorigin="anonymous"
     ></script>
-    <title>GameHub - Cart/title>
+    <title>GameHub - Cart</title>
   </head>
   <body>
     <!-- HEADER SECTION -->
@@ -39,7 +40,9 @@
       </div>
       <div id="members-menu">
         <div id="shopping-cart">
-          <i class="fa-solid icon fa-cart-shopping"></i>
+          <a href="./checkout/cart-empty.html">
+            <i class="fa-solid icon fa-cart-shopping"></i>
+          </a>
         </div>
         <div id="members-menu-links">
           <ul>
@@ -50,7 +53,53 @@
       </div>
     </header>
     <!-- MAIN SECTION -->
-    <main></main>
+    <main>
+      <section id="cart-heading">
+        <h1>Shopping Cart</h1>
+      </section>
+      <section id="cart">
+        <!-- CART CONTENT  -->
+        <div id="cart-content">
+          <div id="cart-product-image">
+            <img
+              src="https://utfs.io/f/CPkGyyZpEykHCHq27kZpEykHPvONKCwr0b68Xeq1slGDc42W"
+              alt="Product Image"
+            />
+          </div>
+          <div id="card-product-description">
+            <div id="cart-product-title">
+              <h4>Ping Pong Championship - Playbox</h4>
+            </div>
+            <div id="cart-product-quantity">
+              <p>Quantity: 1</p>
+            </div>
+            <div id="cart-product-price">
+              <p>Price: 19.90 $</p>
+            </div>
+            <div id="cart-product-remove">
+              <a href="cart-empty.html"
+                ><i class="fa-solid icon fa-trash"></i>Remove item from cart</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- END CART CONTENT -->
+
+        <!-- CART SUMMARY -->
+        <div id="cart-summary">
+          <div id="cart-summary-heading">
+            <h3>Cart Summary</h3>
+          </div>
+          <div id="cart-items">
+            <p><i>No items in cart</i></p>
+          </div>
+          <div id="cart-price">
+            <p>Total: 0.00 $</p>
+          </div>
+        </div>
+        <!-- END CART SECTION -->
+      </section>
+    </main>
     <!-- FOOTER SECTION -->
     <footer>
       <div id="footer-socials">
