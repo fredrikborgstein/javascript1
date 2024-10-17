@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/site-wide.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="../CSS/checkout.css"
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
@@ -50,7 +51,61 @@
       </div>
     </header>
     <!-- MAIN SECTION -->
-    <main></main>
+    <main>
+      <section id="checkout-heading">
+        <h1>Checkout</h1>
+      </section>
+      <section id="checkout-information">
+        <div id="checkout-form">
+          <div id="shipping-form-heading">
+            <h2>Shipping And Billing Information</h2>
+          </div>
+          <div id="shipping-select"></div>
+          <div id="shipping-form">
+            <form id="shipping-form">
+              <label for="full-name">Full name</label>
+              <input id="full-name" />
+              <label for="email">Email</label>
+              <input id="email" type="email" />
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" />
+              <label for="address">Address</label>
+              <input id="address" />
+              <div id="city-zip">
+                <div id="city">
+                  <label for="city">City</label>
+                  <input id="city" />
+                </div>
+                <div id="zip">
+                  <label for="zip">Zip</label>
+                  <input id="zip" />
+                </div>
+            </form>
+          </div>
+        </div>
+        <div id="checkout-summary">
+          <div id="summary-heading">
+            <h2>Cart Summary</h2>
+          </div>
+          <div id="summary-wrapper">
+          <div id="summary-img">
+            <img
+              src="https://utfs.io/f/CPkGyyZpEykHSrBDaTg1MiK5PmvN07cb3g9ZTLJr4zIEFWBs"
+              alt="Product Image"/>
+          </div>
+          <div id="summary-details">
+            <h3>Product Name</h3>
+            <p>Product Description</p>
+            <p>Product Price</p>
+        </div>
+        <div id="summary-price"></div>
+        <div id="summary-btn">
+          <button>Pay now</button>
+        </div>
+      </div>
+        </div>
+      </section>
+    </main>
     <!-- FOOTER SECTION -->
     <footer>
       <div id="footer-socials">

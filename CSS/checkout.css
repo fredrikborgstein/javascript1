@@ -1,0 +1,31 @@
+h1,
+h2,
+h3,
+p,
+label {
+  color: white;
+}
+
+#checkout-heading {
+  text-align: center;
+}
+
+#checkout-information {
+  display: flex;
+  justify-content: space-between;
+}
+
+#shipping-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#checkout-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+#summary-img img {
+  width: 160px;
+  height: 200px;
+}
