@@ -12,12 +12,20 @@ label {
 
 #checkout-information {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-bottom: 200px;
 }
 
 #shipping-form {
   display: flex;
   flex-direction: column;
+}
+
+#shipping-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #checkout-summary {
@@ -26,6 +34,113 @@ label {
 }
 
 #summary-img img {
-  width: 160px;
-  height: 200px;
+  width: 80px;
+  height: 100px;
+  object-fit: fit;
+}
+
+#shipping-select {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+#shipping-select button {
+  padding: 4px 18px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#shipping-select .fa-regular {
+  margin-right: 5px;
+}
+
+#shipping-select .active {
+  background-color: black;
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  margin: 30px 0;
+}
+
+#summary-details {
+  margin-left: 20px;
+}
+
+#summary-details p {
+  font-size: 12px;
+  padding-bottom: 4px;
+}
+
+#summary-price {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#summary-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#summary-btn button {
+  padding: 4px 80px;
+  background-color: #cfa616;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+button:hover,
+#terms,
+a:hover {
+  cursor: pointer;
+}
+
+#shipping-form label {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+#shipping-form input {
+  width: 250px;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+}
+
+#city-input,
+#zip-code {
+  width: 100px !important;
+}
+
+#shipping-form .label-group {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  width: 200px;
+}
+
+#terms-group {
+  display: flex;
+  width: 400px;
+  margin-top: 20px;
+}
+
+#terms-group input {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+
+#terms-group a {
+  text-decoration: none;
+  color: white;
 }

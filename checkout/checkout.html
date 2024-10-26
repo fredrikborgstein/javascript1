@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/site-wide.css" />
-    <link rel="stylesheet" href="../CSS/checkout.css"
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
+    <link rel="stylesheet" href="../CSS/checkout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
@@ -60,26 +60,56 @@
           <div id="shipping-form-heading">
             <h2>Shipping And Billing Information</h2>
           </div>
-          <div id="shipping-select"></div>
+          <div id="shipping-select">
+            <button class="active" type="button">
+              <i class="fa-regular fa-circle-check"></i>Normal
+            </button>
+            <button type="button">
+              <i class="fa-regular fa-circle"></i>Express
+            </button>
+          </div>
           <div id="shipping-form">
-            <form id="shipping-form">
-              <label for="full-name">Full name</label>
-              <input id="full-name" />
-              <label for="email">Email</label>
-              <input id="email" type="email" />
-              <label for="phone">Phone</label>
-              <input id="phone" type="tel" />
-              <label for="address">Address</label>
-              <input id="address" />
-              <div id="city-zip">
-                <div id="city">
-                  <label for="city">City</label>
-                  <input id="city" />
+            <form action="#" method="post">
+              <div class="form-group">
+                <label for="full-name">Full name</label>
+                <input type="text" id="full-name" name="full-name" required />
+              </div>
+              <div class="form-group">
+                <label for="email-address">Email</label>
+                <input type="email" id="email-address" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone-number">Phone</label>
+                <input type="tel" id="phone-number" name="phone" required />
+              </div>
+              <div class="form-group">
+                <label for="street-address">Address</label>
+                <input
+                  type="text"
+                  id="street-address"
+                  name="address"
+                  required
+                />
+              </div>
+              <div id="city-zip-code">
+                <div class="label-group">
+                  <label for="city-input">City</label>
+                  <label for="zip-code">Zip</label>
                 </div>
-                <div id="zip">
-                  <label for="zip">Zip</label>
-                  <input id="zip" />
+                <div class="input-group">
+                  <input type="text" id="city-input" name="city" required />
+                  <input type="text" id="zip-code" name="zip" required />
                 </div>
+              </div>
+              <div class="form-group" id="terms-group">
+                <input type="checkbox" id="terms" name="terms" value="terms" />
+                <label for="terms"
+                  >I have read and accept the
+                  <a href="../legal/termsofservice.html"
+                    >Terms & Conditions</a
+                  ></label
+                >
+              </div>
             </form>
           </div>
         </div>
@@ -87,22 +117,26 @@
           <div id="summary-heading">
             <h2>Cart Summary</h2>
           </div>
-          <div id="summary-wrapper">
-          <div id="summary-img">
-            <img
-              src="https://utfs.io/f/CPkGyyZpEykHSrBDaTg1MiK5PmvN07cb3g9ZTLJr4zIEFWBs"
-              alt="Product Image"/>
+          <div class="wrapper">
+            <div id="summary-img">
+              <img
+                src="https://utfs.io/f/CPkGyyZpEykHCHq27kZpEykHPvONKCwr0b68Xeq1slGDc42W"
+                alt="Product Image"
+              />
+            </div>
+            <div id="summary-details">
+              <p>1 x Ping Pong Championship - Playbox</p>
+              <p>Price per item: 19.90 $ incl VAT</p>
+            </div>
           </div>
-          <div id="summary-details">
-            <h3>Product Name</h3>
-            <p>Product Description</p>
-            <p>Product Price</p>
-        </div>
-        <div id="summary-price"></div>
-        <div id="summary-btn">
-          <button>Pay now</button>
-        </div>
-      </div>
+          <div id="summary-price">
+            <p>Total: 19.90 $ incl VAT</p>
+          </div>
+          <div id="summary-btn">
+            <a href="./checkout-success.html">
+              <button>Pay now</button>
+            </a>
+          </div>
         </div>
       </section>
     </main>
