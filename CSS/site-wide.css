@@ -120,7 +120,7 @@ footer a {
   margin: 10px 0 30px 0;
 }
 
-#mobile-menu-toggle {
+#mobile-menu-container {
   display: none;
 }
 
@@ -256,7 +256,7 @@ footer a {
     display: none; /* Hide main navigation */
   }
 
-  #mobile-menu-toggle {
+  #mobile-menu-container {
     display: block;
     position: absolute;
     top: 1rem;
@@ -318,6 +318,26 @@ footer a {
   #newsletter-button {
     width: 100%;
     padding: 0.75rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .menu-checkbox:checked ~ .menu-toggle-label .menu-icon {
+    display: none;
+  }
+
+  .menu-checkbox:checked ~ .menu-toggle-label .close-icon {
+    display: block;
+  }
+
+  .fa-bars {
+    color: white;
   }
 }
 
