@@ -51,3 +51,44 @@
 .left-about-section {
   margin-right: 20px;
 }
+
+@media screen and (max-width: 640px) {
+  #title-section {
+    padding-bottom: 20px;
+    font-size: 1rem;
+    margin: 0 20px;
+  }
+
+  #title-section h2 {
+    font-size: 0.9rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    width: 90 %;
+    margin: 0 10px;
+  }
+
+  .about-section p {
+    font-size: 0.8rem;
+    margin: 10px 10px;
+  }
+
+  .about-image {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .right-about-section h3 {
+    text-align: center;
+  }
+
+  .right-about-section li {
+    font-size: 0.8rem;
+  }
+
+  about-image img {
+    margin-bottom: 10px;
+  }
+}
