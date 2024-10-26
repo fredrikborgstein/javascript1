@@ -29,6 +29,38 @@
           id="site-logo"
         />
       </div>
+      <div id="mobile-menu-container">
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+        <label
+          for="menu-toggle"
+          class="menu-toggle-label"
+          aria-label="Toggle menu"
+        >
+          <i class="fa-solid fa-bars menu-icon"></i>
+          <i class="fa-solid fa-xmark close-icon"></i>
+        </label>
+
+        <div class="mobile-menu">
+          <nav class="mobile-nav">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../allproducts.html">All Products</a></li>
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../contact.html">Contact Us</a></li>
+              <li class="mobile-menu-separator"></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Register</a></li>
+              <li>
+                <a href="#" class="cart-link">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  Cart
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <label class="mobile-overlay" for="menu-toggle"></label>
+      </div>
       <div id="main-nav">
         <nav>
           <ul>
