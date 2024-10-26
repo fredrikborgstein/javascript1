@@ -128,3 +128,25 @@ p {
 #shopping-cart {
   position: relative;
 }
+
+@media screen and (max-width: 640px) {
+  #cart {
+    flex-direction: column;
+  }
+
+  #cart-content {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  #cart-content h4 {
+    padding-top: 20px;
+  }
+
+  #cart-summary {
+    border-left: none;
+    padding-left: 0;
+    width: 100%;
+    align-items: center;
+  }
+}
