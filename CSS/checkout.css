@@ -223,6 +223,10 @@ a:hover {
     padding: 4px 50px;
   }
 
+  #summary-heading {
+    text-align: center;
+  }
+
   #terms-group {
     width: 250px;
   }
