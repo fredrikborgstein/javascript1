@@ -1,0 +1,30 @@
+#login-form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  padding-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#login-form-section .btn {
+  border-radius: 5px;
+  border: 1px solid black;
+  justify-self: flex-end;
+  width: 180px;
+  padding: 6px 30px;
+  align-self: center;
+  margin-top: 30px;
+  background-color: #cfa616;
+}

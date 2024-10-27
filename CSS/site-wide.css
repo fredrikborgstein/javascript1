@@ -13,6 +13,13 @@ h3 {
   font-family: "Bree Serif", serif;
 }
 
+h1,
+h4,
+h3,
+p {
+  color: white;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #1b203d;
@@ -357,6 +364,10 @@ footer a {
   .fa-bars {
     color: white;
   }
+}
+
+.heading {
+  text-align: center;
 }
 
 /* CSS for tablet screens */
