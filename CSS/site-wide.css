@@ -27,9 +27,6 @@ body {
   margin: 0 auto;
 }
 
-/* CSS for fonts */
-
-/* CSS for header */
 header {
   display: flex;
   justify-content: space-between;
@@ -70,7 +67,6 @@ header ul li a {
   align-items: center;
 }
 
-/* CSS for footer */
 footer {
   color: white;
   display: flex;
@@ -244,7 +240,6 @@ footer a {
   display: none;
 }
 
-/* Mobile navigation styling */
 .mobile-nav {
   padding: 60px 0 20px;
 }
@@ -277,21 +272,18 @@ footer a {
   background-color: #f5f5f5;
 }
 
-/* Separator line */
 .mobile-menu-separator {
   height: 1px;
   background-color: #e0e0e0;
   margin: 10px 0;
 }
 
-/* Cart link specific styling */
 .cart-link {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Overlay when menu is open */
 .mobile-overlay {
   position: fixed;
   top: 0;
@@ -305,7 +297,6 @@ footer a {
   z-index: 999;
 }
 
-/* Menu open states */
 .menu-checkbox:checked ~ .mobile-menu {
   right: 0;
 }
@@ -323,14 +314,11 @@ footer a {
   display: block;
 }
 
-/* Hide mobile menu on larger screens */
 @media screen and (min-width: 641px) {
   .mobile-menu-container {
     display: none;
   }
 }
-
-/* CSS for mobile screens */
 
 @media screen and (max-width: 640px) {
   .menu-checkbox:checked ~ .mobile-menu {
