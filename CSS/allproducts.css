@@ -66,3 +66,13 @@ h2 {
     gap: 10px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  #filters {
+    display: flex;
+    justify-content: center;
+  }
+  #filters label {
+    display: none;
+  }
+}
