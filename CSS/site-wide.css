@@ -151,7 +151,6 @@ footer a {
   transition: transform 0.3s ease;
 }
 
-/* Hide close icon by default */
 .close-icon {
   display: none;
 }
@@ -195,7 +194,6 @@ footer a {
   padding-top: 1rem;
 }
 
-/* Overlay styles */
 .menu-toggle-label::before {
   content: "";
   position: fixed;
@@ -211,37 +209,154 @@ footer a {
   pointer-events: none;
 }
 
-/* Checkbox Magic ✨ */
+.menu-checkbox {
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100vh;
+  background-color: white;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.menu-toggle-label {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-icon,
+.close-icon {
+  font-size: 24px;
+  color: #333;
+}
+
+.close-icon {
+  display: none;
+}
+
+/* Mobile navigation styling */
+.mobile-nav {
+  padding: 60px 0 20px;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mobile-nav li {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  padding: 15px 25px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.mobile-nav a:hover {
+  background-color: #f5f5f5;
+}
+
+/* Separator line */
+.mobile-menu-separator {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 10px 0;
+}
+
+/* Cart link specific styling */
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Overlay when menu is open */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  z-index: 999;
+}
+
+/* Menu open states */
 .menu-checkbox:checked ~ .mobile-menu {
   right: 0;
 }
 
-.menu-checkbox:checked ~ .menu-toggle-label::before {
+.menu-checkbox:checked ~ .mobile-overlay {
   opacity: 1;
   visibility: visible;
-  pointer-events: auto;
 }
 
-/* Icon swap when menu is open */
 .menu-checkbox:checked ~ .menu-toggle-label .menu-icon {
   display: none;
 }
 
 .menu-checkbox:checked ~ .menu-toggle-label .close-icon {
   display: block;
-  transform: rotate(180deg);
+}
+
+/* Hide mobile menu on larger screens */
+@media screen and (min-width: 641px) {
+  .mobile-menu-container {
+    display: none;
+  }
 }
 
 /* CSS for mobile screens */
 
 @media screen and (max-width: 640px) {
-  /* General layout */
+  .menu-checkbox:checked ~ .mobile-menu {
+    right: 0;
+  }
+
+  .menu-checkbox:checked ~ .menu-toggle-label::before {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .menu-checkbox:checked ~ .menu-toggle-label .menu-icon {
+    display: none;
+  }
+
+  .menu-checkbox:checked ~ .menu-toggle-label .close-icon {
+    display: block;
+    transform: rotate(180deg);
+  }
+
   body {
     width: 100%;
     padding: 0 0.5rem;
   }
 
-  /* Header styles */
   header {
     display: flex;
     flex-direction: column;
@@ -260,7 +375,7 @@ footer a {
   }
 
   #main-nav {
-    display: none; /* Hide main navigation */
+    display: none;
   }
 
   #mobile-menu-container {
@@ -288,6 +403,23 @@ footer a {
 
   #members-menu {
     display: none;
+  }
+}
+
+.heading {
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #main-nav {
+    margin-bottom: 20px;
   }
 
   footer {
@@ -361,22 +493,7 @@ footer a {
     display: block;
   }
 
-  .fa-bars {
-    color: white;
-  }
-}
-
-.heading {
-  text-align: center;
-}
-
-/* CSS for tablet screens */
-
-@media screen and (max-width: 1024px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  .heading {
+    text-align: center;
   }
 }
