@@ -155,6 +155,12 @@ li {
     flex-direction: column;
     text-align: center;
   }
+
+  #featured-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
