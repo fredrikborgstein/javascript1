@@ -76,3 +76,17 @@ h2 {
     display: none;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  #product-grid {
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  #filter-section {
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+}

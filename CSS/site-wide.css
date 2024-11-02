@@ -465,3 +465,10 @@ footer a {
     margin: 30px 200px;
   }
 }
+
+@media screen and (min-width: 1300px) {
+  main {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
