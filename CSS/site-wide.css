@@ -108,7 +108,7 @@ footer a {
   border-radius: 5px;
   border: 1px solid white;
   background-color: white;
-  color: white;
+  color: black;
   border-radius: 5px;
 }
 #newsletter-button {
@@ -143,8 +143,11 @@ footer a {
 
 .menu-toggle-label i {
   font-size: 1.5rem;
-  color: #333;
   transition: transform 0.3s ease;
+}
+
+.menu-toggle-label .fa-bars {
+  color: white;
 }
 
 .close-icon {
@@ -228,6 +231,7 @@ footer a {
   z-index: 1001;
   cursor: pointer;
   padding: 10px;
+  color: white;
 }
 
 .menu-icon,
