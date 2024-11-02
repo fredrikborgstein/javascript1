@@ -237,11 +237,11 @@ footer a {
 .menu-icon,
 .close-icon {
   font-size: 24px;
-  color: #333;
 }
 
 .close-icon {
   display: none;
+  color: #1b203d;
 }
 
 .mobile-nav {
@@ -342,6 +342,7 @@ footer a {
   .menu-checkbox:checked ~ .menu-toggle-label .close-icon {
     display: block;
     transform: rotate(180deg);
+    color: #333;
   }
 
   body {
