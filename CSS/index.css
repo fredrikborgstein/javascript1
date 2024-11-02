@@ -25,14 +25,21 @@
 #hero-section-button {
   position: absolute;
   bottom: 20%;
-  font-size: 1.5rem;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: #cfa616;
   filter: drop-shadow(5px 5px 10px #000000);
+}
+
+.hero-section-button {
+  width: 200px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.promotion-section-button {
+  width: 200px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 #hero-section-button:hover {
@@ -76,7 +83,7 @@
 .members-section-body {
   display: flex;
   justify-content: space-around;
-  gap: 10px;4
+  gap: 10px;
 }
 
 .members-section-card {
@@ -94,8 +101,9 @@
 #members-section-button,
 #promotion-section-button {
   width: 200px;
-  padding: 10px 20px;
+  padding: 10px 50px;
   margin: 20px 0;
+  text-align: center;
 }
 
 #promotion-section-button {
@@ -179,7 +187,7 @@
   }
 
   .card {
-   width: 260px;
+    width: 260px;
   }
 }
 
@@ -201,7 +209,6 @@
 
   .members-section-body {
     flex-direction: column;
-    
   }
 }
 
@@ -212,11 +219,11 @@
 
   #hero-section-title h1 {
     position: absolute;
-  top: 20%;
-  left: 15%;
-  text-shadow: -4px -4px 0 black, 4px -4px 0 black, -4px 4px 0 black,
-    4px 4px 0 black, -5px 0px 0 black, 5px 0px 0 black, 0px 5px 0 black,
-    0px -5px 0 black;
+    top: 20%;
+    left: 15%;
+    text-shadow: -4px -4px 0 black, 4px -4px 0 black, -4px 4px 0 black,
+      4px 4px 0 black, -5px 0px 0 black, 5px 0px 0 black, 0px 5px 0 black,
+      0px -5px 0 black;
   }
 
   #promotion-section {
@@ -236,6 +243,5 @@
     text-shadow: -4px -4px 0 black, 4px -4px 0 black, -4px 4px 0 black,
       4px 4px 0 black, -5px 0px 0 black, 5px 0px 0 black, 0px 5px 0 black,
       0px -5px 0 black;
-    }
   }
-
+}

@@ -12,3 +12,14 @@ h1 {
   font-weight: 700;
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
