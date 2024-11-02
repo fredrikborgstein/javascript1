@@ -132,13 +132,18 @@ footer a {
 }
 
 .menu-toggle-label {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
-  cursor: pointer;
-  padding: 0.5rem;
 }
 
 .menu-toggle-label i {
@@ -152,64 +157,7 @@ footer a {
 
 .close-icon {
   display: none;
-}
-
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 80%;
-  max-width: 300px;
-  height: 100vh;
-  background-color: white;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  transition: right 0.3s ease-in-out;
-  z-index: 1000;
-}
-
-.mobile-nav ul {
-  list-style: none;
-  padding: 2rem 1rem;
-  margin: 0;
-}
-
-.mobile-nav li {
-  margin-bottom: 1rem;
-}
-
-.mobile-nav a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: #333;
-  font-size: 1.1rem;
-  padding: 0.5rem;
-}
-
-.mobile-menu-separator {
-  border-top: 1px solid #eee;
-  margin: 1rem 0;
-  padding-top: 1rem;
-}
-
-.menu-toggle-label::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  z-index: 999;
-  pointer-events: none;
-}
-
-.menu-checkbox {
-  display: none;
+  color: #1b203d;
 }
 
 .mobile-menu {
@@ -224,28 +172,29 @@ footer a {
   z-index: 1000;
 }
 
-.menu-toggle-label {
+.menu-checkbox:checked ~ .menu-toggle-label {
+  pointer-events: none;
+}
+
+.menu-checkbox:checked ~ .mobile-menu::before {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1001;
-  cursor: pointer;
-  padding: 10px;
-  color: white;
-}
-
-.menu-icon,
-.close-icon {
   font-size: 24px;
-}
-
-.close-icon {
-  display: none;
   color: #1b203d;
+  cursor: pointer;
+  z-index: 1002;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-nav {
   padding: 60px 0 20px;
+  position: relative;
+  z-index: 1003;
 }
 
 .mobile-nav ul {
@@ -264,12 +213,15 @@ footer a {
 }
 
 .mobile-nav a {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
   padding: 15px 25px;
   color: #333;
   text-decoration: none;
   transition: background-color 0.2s;
+  cursor: pointer;
+  font-size: 1.1rem;
 }
 
 .mobile-nav a:hover {
@@ -280,12 +232,18 @@ footer a {
   height: 1px;
   background-color: #e0e0e0;
   margin: 10px 0;
+  width: 100%;
 }
 
 .cart-link {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.cart-link i {
+  font-size: 1.2rem;
+  color: #333;
 }
 
 .mobile-overlay {
@@ -310,12 +268,22 @@ footer a {
   visibility: visible;
 }
 
-.menu-checkbox:checked ~ .menu-toggle-label .menu-icon {
-  display: none;
+.menu-checkbox:checked ~ .mobile-menu .mobile-nav {
+  pointer-events: auto;
 }
 
-.menu-checkbox:checked ~ .menu-toggle-label .close-icon {
-  display: block;
+.menu-checkbox:checked ~ header,
+.menu-checkbox:checked ~ main,
+.menu-checkbox:checked ~ footer {
+  filter: none;
+}
+
+.mobile-menu,
+.mobile-nav,
+.mobile-nav ul,
+.mobile-nav li,
+.mobile-nav a {
+  pointer-events: auto !important;
 }
 
 @media screen and (min-width: 641px) {
@@ -327,22 +295,6 @@ footer a {
 @media screen and (max-width: 640px) {
   .menu-checkbox:checked ~ .mobile-menu {
     right: 0;
-  }
-
-  .menu-checkbox:checked ~ .menu-toggle-label::before {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-
-  .menu-checkbox:checked ~ .menu-toggle-label .menu-icon {
-    display: none;
-  }
-
-  .menu-checkbox:checked ~ .menu-toggle-label .close-icon {
-    display: block;
-    transform: rotate(180deg);
-    color: #333;
   }
 
   body {
@@ -379,15 +331,8 @@ footer a {
     z-index: 1001;
   }
 
-  .menu-checkbox:checked ~ header,
-  .menu-checkbox:checked ~ main,
-  .menu-checkbox:checked ~ footer {
-    filter: blur(3px);
-    pointer-events: none;
-  }
-
   .mobile-nav a {
-    padding: 0.75rem 0.5rem;
+    padding: 0.75rem 1.5rem;
   }
 
   .mobile-nav li:last-child {
@@ -397,10 +342,6 @@ footer a {
   #members-menu {
     display: none;
   }
-}
-
-.heading {
-  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -468,26 +409,6 @@ footer a {
   #newsletter-button {
     width: 100%;
     padding: 0.5rem;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .close-icon {
-    display: none;
-  }
-
-  .menu-checkbox:checked ~ .menu-toggle-label .menu-icon {
-    display: none;
-  }
-
-  .menu-checkbox:checked ~ .menu-toggle-label .close-icon {
-    display: block;
-  }
-
-  .heading {
-    text-align: center;
   }
 }
 
