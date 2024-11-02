@@ -60,8 +60,8 @@ This project is part of the **Front-End Development** curriculum at Noroff Unive
 ## How to Run the Project
 
 1. Clone the repository or download the project files.
-2. Open the `index.html` file in any modern web browser.
-3. To customize styles, modify the `styles.css` file located in the `/css` folder.
+2. Open the `index.html` file in any modern web browser, or alternatively make use of Live Server plugin for VS Code
+3. To customize styles, modify the different CSS files located in the `/css` folder.
 
 ---
 
