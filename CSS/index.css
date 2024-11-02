@@ -204,3 +204,38 @@
     
   }
 }
+
+@media screen and (min-width: 1600px) {
+  #hero-section {
+    background-position: center 40%;
+  }
+
+  #hero-section-title h1 {
+    position: absolute;
+  top: 20%;
+  left: 15%;
+  text-shadow: -4px -4px 0 black, 4px -4px 0 black, -4px 4px 0 black,
+    4px 4px 0 black, -5px 0px 0 black, 5px 0px 0 black, 0px 5px 0 black,
+    0px -5px 0 black;
+  }
+
+  #promotion-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1600px) {
+  #hero-section-title h1 {
+    font-size: 2.8rem;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    text-shadow: -4px -4px 0 black, 4px -4px 0 black, -4px 4px 0 black,
+      4px 4px 0 black, -5px 0px 0 black, 5px 0px 0 black, 0px 5px 0 black,
+      0px -5px 0 black;
+    }
+  }
+
