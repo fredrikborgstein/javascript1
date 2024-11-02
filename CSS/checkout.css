@@ -61,6 +61,12 @@ label {
   color: white;
 }
 
+.checkout-btn {
+  padding: 10px 50px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .wrapper {
   display: flex;
   margin: 30px 0;
