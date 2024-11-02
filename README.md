@@ -25,26 +25,36 @@ This project is part of the **Front-End Development** curriculum at Noroff Unive
 ## Project Structure
 
 ```bash
-|-- /images                 # Images
-|-- /legal                  # Subpages concerning legals, cookies, and terms
-|   |-- cookiepolicy.html   # HTML-File for Cookie Policy page
-|   |-- legalnotice.html    # HTML-File for Legal Notice page
-|   |-- termsofservice.html # HTML-File for Terms of Service page
-|-- /css                    # Custom stylesheets
-|   |-- site-wide.css       # Main CSS file - covers a lot of common CSS across pages
-|   |-- index.css           # CSS file for Homepage
-|   |-- about.css           # CSS file for About page
-|   |-- allproducts.css     # CSS file for All Products page
-|   |-- card.css            # CSS file for cards used across the website
-|   |-- legalnotice.css     # CSS file for the legal pages in /legal
-|   |-- contact.css         # CSS file for Contact page
-|   |-- productpage.css     # CSS file for the Product page
-|-- /index.html             # Main HTML file
-|-- /about.html             # HTML file for About page
-|-- /contact.html           # HTML file for Contact page
-|-- /allproducts.html       # HTML file for All Products page
-|-- /productpage.html       # HTML file for Product page
-|-- README.md               # This file
+|-- /images                     # Images
+|-- /checkout                   # Checkout Pages
+|   |-- cart-empty.html         # HTML-File for The empty cart page
+|   |-- cart.html               # HTML-File for The cart page
+|   |-- checkout.html           # HTML-File for The checkout page
+|   |-- checkout-success.html   # HTML-File for The checkout page
+|-- /legal                      # Subpages concerning legals, cookies, and terms
+|   |-- cookiepolicy.html       # HTML-File for Cookie Policy page
+|   |-- legalnotice.html        # HTML-File for Legal Notice page
+|   |-- termsofservice.html     # HTML-File for Terms of Service page
+|-- /css                        # Custom stylesheets
+|   |-- site-wide.css           # Main CSS file - covers a lot of common CSS across pages
+|   |-- index.css               # CSS file for Homepage
+|   |-- about.css               # CSS file for About page
+|   |-- allproducts.css         # CSS file for All Products page
+|   |-- card.css                # CSS file for cards used across the website
+|   |-- legalnotice.css         # CSS file for the legal pages in /legal
+|   |-- contact.css             # CSS file for Contact page
+|   |-- productpage.css         # CSS file for the Product page
+|   |-- checkout.css            # CSS file for the checkout page
+|   |-- cart.css                # CSS file for the cart pages
+|   |-- checkout-success.css    # CSS file for the checkout success page
+|   |-- constr.css              # CSS file for the underconstruction page
+|-- /index.html                 # Main HTML file
+|-- /about.html                 # HTML file for About page
+|-- /contact.html               # HTML file for Contact page
+|-- /allproducts.html           # HTML file for All Products page
+|-- /productpage.html           # HTML file for Product page
+|-- /underconstruction.html     # HTML file for underconstruction page
+|-- README.md                   # This file
 ```
 
 ## How to Run the Project
@@ -61,7 +71,8 @@ This project is part of the **Front-End Development** curriculum at Noroff Unive
 - **CSS3**: For styling and responsive layouts.
   - **Flexbox** and/or **CSS Grid** for layout design.
   - **Media Queries** for responsive behavior.
-- **Optional (if applicable)**: Any external libraries like Google Fonts or a CSS framework (e.g., Bootstrap).
+- **FontAwesome**: For icons
+- **Google Fonts**: For fonts
 
 ---
 
@@ -86,6 +97,7 @@ This project is part of the **Front-End Development** curriculum at Noroff Unive
 - Ensure all images have `alt` text for screen readers.
 - Use proper heading hierarchy for readability.
 - Ensure sufficient color contrast between text and background.
+- Be WCAG compliant
 
 ---
 
