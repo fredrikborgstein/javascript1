@@ -87,7 +87,6 @@ This project is part of the **Front-End Development** curriculum at Noroff Unive
 
 - Create a responsive design that works on both desktop and mobile devices.
 - Implement a navigation bar with links.
-- Add an image gallery or media section using images or videos.
 - Style the typography, colors, and layout of the page using custom CSS.
 
 ---
