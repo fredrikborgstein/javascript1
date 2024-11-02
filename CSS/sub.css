@@ -1,0 +1,13 @@
+#sub-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  padding-bottom: 20px;
+}
