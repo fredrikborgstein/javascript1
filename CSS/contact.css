@@ -2,16 +2,6 @@ h1 {
   text-align: center;
 }
 
-h1,
-p,
-h5,
-label,
-h2,
-h3,
-h4 {
-  color: white;
-}
-
 #contact-title-section {
   padding-bottom: 40px;
 }
