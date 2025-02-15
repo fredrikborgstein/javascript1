@@ -1,145 +1,129 @@
-#cart-heading {
-  text-align: center;
-  padding-bottom: 40px;
-}
-
+/* General Cart Styling */
 #cart {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 40px;
+  padding: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
-#cart h4 {
-  margin: 10px;
+#cart-heading h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-#cart-product-title h4,
-#cart-product-price p,
-#cart-product-quantity p {
-  margin: 0 !important;
-  padding-bottom: 20px;
-}
-
+/* Cart Content Styling */
 #cart-content {
-  min-height: 50vh;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.product-card {
   display: flex;
-  max-width: 70%;
-}
-
-#card-content-empty {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#cart-product-image img {
-  width: 141px;
-  height: 154px;
-  object-fit: cover;
-  margin: 0 30px 0 50px;
-}
-
-#cart-product-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#cart-summary {
-  border-left: 2px solid white;
-  min-height: 50vh;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 40px;
-  align-items: normal;
-  padding-left: 30px;
-}
-
-#empty-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#cart-empty-button,
-#checkout-btn {
-  margin-top: 20px;
-  padding: 5px 10px;
-  background-color: #cfa616;
-  border: 1px solid black;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  padding: 10px;
   border-radius: 5px;
-  text-decoration: none;
-  padding: 10px 20px;
-  color: white;
-  filter: drop-shadow(2px 2px 6px #000000);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: space-between; /* Distribute space evenly */
 }
 
-#cart-items {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+.image-container {
+  flex: 0 0 100px;
+  margin-right: 15px;
 }
 
-#cart-items p {
-  font-size: 12px;
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
 }
 
-#cart-empty-button:hover,
-#checkout-btn:hover {
-  background-color: #f7d7a9;
+h2 {
+  font-size: 1rem;
+}
+
+.quantity p, .price p {
+  font-size: 0.8rem;
+}
+
+/* Quantity and Price Styling */
+.quantity-container,
+.price-container {
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.quantity-counter,
+.product-price {
+  font-weight: bold;
+}
+
+/* Control Styling (Trash Icon) */
+.control-container {
   cursor: pointer;
+  color: #888;
+  font-size: 1.2em;
 }
 
-#cart-product-remove a {
-  color: white;
-  text-decoration: none;
+.fa-trash {
+  color: #e44d26;
 }
 
-#cart-product-remove .fa-solid {
-  padding-right: 10px;
-}
-
-#cart-notification {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-
-  background: red;
-  font-size: 10px;
-  color: white;
+/* Cart Summary Styling */
+#cart-summary {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-#shopping-cart {
-  position: relative;
+#cart-summary-heading h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
 }
 
-@media screen and (max-width: 640px) {
-  #cart {
-    flex-direction: column;
-  }
+#cart-items,
+#cart-price {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
 
-  #cart-content {
-    flex-direction: column;
-    max-width: 100%;
-  }
+#checkout-btn {
+  background-color: #cfa616;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
 
-  #cart-content h4 {
-    padding-top: 20px;
-  }
+#checkout-btn:hover {
+  background-color: #367c39;
+}
 
-  #cart-summary {
-    border-left: none;
-    padding-left: 0;
-    width: 100%;
-    align-items: center;
-  }
+.cart-card {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.quantity {
+  display: block;
+}
+
+.control {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.fa-solid:hover {
+  cursor: pointer;
 }

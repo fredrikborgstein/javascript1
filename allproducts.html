@@ -105,206 +105,34 @@
       <section id="filter-section">
         <h2>Filter</h2>
         <div id="filters">
-          <!-- TODO: Find way to show what the filter is for without the label -->
-          <label for="platform">Platform:</label>
-          <select name="platform" id="platform">
-            <option value="Platform" disabled selected>Platform</option>
-            <option value="all">All</option>
-            <option value="ps4">PS4</option>
-            <option value="ps5">PS5</option>
-            <option value="xbox">Xbox</option>
-            <option value="pc">PC</option>
-          </select>
+          <style>
+            #search {
+              padding: 8px;
+            }
+            #clear-filter {
+              padding: 8px;
+            }
+          </style>
+          <label for="search">Search:</label>
+          <input id="search" name="search" type="search" />
           <label for="genre">Genre:</label>
           <select name="genre" id="genre">
             <option value="Genre" disabled selected>Genre</option>
-            <option value="all">All</option>
-            <option value="action">Action</option>
-            <option value="adventure">Adventure</option>
-            <option value="rpg">RPG</option>
-            <option value="fps">FPS</option>
-          </select>
-          <label for="type">Type:</label>
-          <select name="type" id="type">
-            <option value="Type" disabled selected>Type</option>
-            <option value="all">All</option>
-            <option value="digital">Digital</option>
-            <option value="physical">Physical</option>
           </select>
           <label for="sortby">Sort By:</label>
           <select name="sortby" id="sortby">
             <option value="Sortby" disabled selected>Sort by</option>
-            <option value="all">All</option>
+            <option value="name">Name</option>
             <option value="price">Price</option>
             <option value="popularity">Popularity</option>
             <option value="release">Release Date</option>
           </select>
+          <a class="btn" href="#" id="clear-filter">Clear Filter</a>
         </div>
       </section>
       <!-- PRODUCT GRID SECTION -->
       <section id="product-grid">
-        <div class="card">
-          <div class="card-title">
-            <h3>Ping Pong</h3>
-          </div>
-          <div class="card-image">
-            <img
-              src="./images/GameHubcovers.webp"
-              alt="The cover of the Playbox game Ping Pong Champions"
-            />
-          </div>
-          <div class="card-info">
-            <p>Playbox</p>
-            <p>£19.99</p>
-          </div>
-          <div class="card-button">
-            <a href="productpage.html" class="card-text">Add to Cart</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            <h3>Super Duper</h3>
-          </div>
-          <div class="card-image">
-            <img
-              src="/images/GameHubcovers2.webp"
-              alt="The cover of the Playbox game Super Duper"
-            />
-          </div>
-          <div class="card-info">
-            <p>Playbox</p>
-            <p>£12.99</p>
-          </div>
-          <div class="card-button">
-            <a href="productpage.html" class="card-text">Add to Cart</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            <h3>Black</h3>
-          </div>
-          <div class="card-image">
-            <img
-              src="/images/GameHubcovers3.webp"
-              alt="The cover of the Playbox game Black"
-            />
-          </div>
-          <div class="card-info">
-            <p>Playbox</p>
-            <p>£15.99</p>
-          </div>
-          <div class="card-button">
-            <a href="productpage.html" class="card-text">Add to Cart</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            <h3>Furious</h3>
-          </div>
-          <div class="card-image">
-            <img
-              src="/images/GameHubcovers4.webp"
-              alt="The cover of the Playbox game Furious"
-            />
-          </div>
-          <div class="card-info">
-            <p>Playbox</p>
-            <p>£29.99</p>
-          </div>
-          <div class="card-button">
-            <a href="productpage.html" class="card-text">Add to Cart</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            <h3>Assassin</h3>
-          </div>
-          <div class="card-image">
-            <img
-              src="/Images/GameHubcovers5.webp"
-              alt="The cover of the Playbox game Assassin"
-            />
-          </div>
-          <div class="card-info">
-            <p>Playbox</p>
-            <p>£39.99</p>
-          </div>
-          <div class="card-button">
-            <a href="productpage.html" class="card-text">Add to Cart</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            <h3>Space War</h3>
-          </div>
-          <div class="card-image">
-            <img
-              src="/Images/GameHubcovers6.webp"
-              alt="The cover of the Playbox game Space War"
-            />
-          </div>
-          <div class="card-info">
-            <p>Playbox</p>
-            <p>£9.99</p>
-          </div>
-          <div class="card-button">
-            <a href="productpage.html" class="card-text">Add to Cart</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            <h3>Racing</h3>
-          </div>
-          <div class="card-image">
-            <img
-              src="/Images/GameHubcovers7.webp"
-              alt="The cover of the Playbox game Racing"
-            />
-          </div>
-          <div class="card-info">
-            <p>Playbox</p>
-            <p>£19.99</p>
-          </div>
-          <div class="card-button">
-            <a href="productpage.html" class="card-text">Add to Cart</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            <h3>Cyberpunk</h3>
-          </div>
-          <div class="card-image">
-            <img
-              src="/Images/GameHubcovers9.webp"
-              alt="The cover of the Playbox game Cyberpunk"
-            />
-          </div>
-          <div class="card-info">
-            <p>Playbox</p>
-            <p>£49.99</p>
-          </div>
-          <div class="card-button">
-            <a href="productpage.html" class="card-text">Add to Cart</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            <h3>Forge Legend</h3>
-          </div>
-          <div class="card-image">
-            <img
-              src="/Images/GameHubcovers10.webp"
-              alt="The cover of the Playbox game Forge Legend"
-            />
-          </div>
-          <div class="card-info">
-            <p>Playbox</p>
-            <p>£39.99</p>
-          </div>
-          <div class="card-button">
-            <a href="productpage.html" class="card-text">Add to Cart</a>
-          </div>
-        </div>
+
       </section>
     </main>
     <!-- FOOTER SECTION -->
@@ -365,5 +193,6 @@
         </form>
       </div>
     </footer>
+  <script type="module" src="scripts/pages/allProducts.js" defer></script>
   </body>
 </html>

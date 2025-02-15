@@ -474,3 +474,22 @@ footer a {
     margin: 0 auto;
   }
 }
+
+#cart-count {
+  background-color: #f44336;
+  color: white;
+  font-size: 0.7em;
+  padding: 2px 5px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  min-width: 1.2em;
+}
+
+#shopping-cart {
+  position: relative;
+}

@@ -52,7 +52,7 @@ This project is part of the **Front-End Development** curriculum at Noroff Unive
 |-- /about.html                 # HTML file for About page
 |-- /contact.html               # HTML file for Contact page
 |-- /allproducts.html           # HTML file for All Products page
-|-- /productpage.html           # HTML file for Product page
+|-- /product.html           # HTML file for Product page
 |-- /underconstruction.html     # HTML file for underconstruction page
 |-- README.md                   # This file
 ```
