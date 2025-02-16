@@ -22,6 +22,11 @@ export function subscribeToNewsletter()
     const input = document.getElementById('email-input');
     const email = input.value;
 
+    if (!email) {
+        toast.show('Please enter a valid email address', 'error');
+        return;
+    }
+
     if (checkIsSubToNewsletters(email)) {
         toast.show('You are already subscribed to our newsletter.', 'error');
         input.value = '';
