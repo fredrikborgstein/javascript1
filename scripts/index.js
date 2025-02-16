@@ -4,9 +4,11 @@ import { buildBestsellers, buildNewReleases } from './utils/products.js';
 import {becomeMemberForm, loadHeaderAndFooter, submitContactForm, subscribeToNewsletter} from './utils/utils.js';
 import { getCartFromStorage } from './utils/cart.js';
 import Toaster from "./components/toaster.js";
+import Spinner from "./components/spinner.js";
 
 
 const toast = new Toaster();
+
 
 function updateCartCount() {
     const cart = getCartFromStorage();
@@ -25,6 +27,8 @@ function updateCartCount() {
 export { updateCartCount };
 
 async function initHomePage() {
+    const spinner = new Spinner('#promotion-section');
+    spinner.show();
     try {
         const products = await fetchAllProducts();
 
@@ -36,7 +40,9 @@ async function initHomePage() {
         }
     } catch (error) {
         toast.show(error.message, 'error');
+        spinner.hide();
     }
+    spinner.hide();
 }
 
 async function initPage() {

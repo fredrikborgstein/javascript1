@@ -2,8 +2,10 @@ import {generateFeaturedSection, getOneProduct} from "../utils/apiFunctions.js";
 import {buildProductPage} from "../utils/products.js";
 import Toaster from "../components/toaster.js";
 import {addToCart} from "../utils/cart.js";
+import Spinner from "../components/spinner.js";
 
 const toast = new Toaster();
+const spinner = new Spinner('#product-info');
 
 function getProductIdFromUrl() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -11,6 +13,7 @@ function getProductIdFromUrl() {
 }
 
 async function initProductPage() {
+    spinner.show();
     const productId = getProductIdFromUrl();
     const product = await getOneProduct(productId);
     const price = product.data.discountedPrice ?? product.data.price;
@@ -21,6 +24,7 @@ async function initProductPage() {
     const cartData = {productId, price};
 
     await generateFeaturedSection(genre, productId);
+    spinner.hide();
     return cartData;
 
 }
@@ -33,5 +37,3 @@ addToCartBtn.addEventListener("click", async (e) => {
     addToCart(cartData.productId, cartData.price);
     toast.show("Added to cart!", 'success');
 })
-
-

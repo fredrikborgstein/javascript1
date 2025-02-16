@@ -6,15 +6,17 @@ import {
     increaseQuantity,
     removeFromCart
 } from "../utils/cart.js";
-import {getOneProduct} from "../utils/apiFunctions.js";
 import {buildCart} from "../utils/products.js";
 import {getProductDetails} from "../utils/utils.js";
+import Spinner from "../components/spinner.js";
+
 
 const cartContainer = document.getElementById('cart-content');
 const cartItems = document.getElementById('cart-items');
 const cartPrice = document.getElementById('cart-price');
 
 const toast = new Toaster();
+const spinner = new Spinner('#cart-content');
 
 cartContainer.innerHTML = '';
 cartItems.innerHTML = '';
@@ -116,6 +118,7 @@ async function updateProductSummary() {
 }
 
 async function initCartPage() {
+    spinner.show();
     const cartData = getCartFromStorage();
     const cartProducts = await getProductDetails(cartData);
     if (cartProducts.length === 0) {
@@ -135,7 +138,7 @@ async function initCartPage() {
         buildCart(cartProducts);
         addEventListeners();
     }
-
+    spinner.hide();
     return cartProducts;
 }
 

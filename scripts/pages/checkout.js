@@ -2,8 +2,10 @@ import Toaster from "../components/toaster.js";
 import Modal from "../components/modal.js";
 import {emptyCart, getCartFromStorage, getCartTotalPrice} from "../utils/cart.js";
 import {getProductDetails} from "../utils/utils.js";
+import Spinner from "../components/Spinner.js";
 
 const toast = new Toaster();
+const spinner = new Spinner('#cart-summary');
 const modal = new Modal();
 
 const submitBtn = document.getElementById("checkout-btn");
@@ -21,6 +23,7 @@ const roundedPrice = parseFloat(totalPrice.toFixed(2));
 priceP.innerText = `Total price ${roundedPrice} $`;
 
 async function updateProductSummary() {
+    spinner.show();
     const cartData = getCartFromStorage();
     const products = await getProductDetails(cartData);
     cartSummary.innerHTML = '';
@@ -30,6 +33,7 @@ async function updateProductSummary() {
         summaryItems.innerText = `${product.quantity} x ${productData.title}`;
         cartSummary.appendChild(summaryItems);
     }
+    spinner.hide();
     return products;
 }
 

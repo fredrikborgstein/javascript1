@@ -83,7 +83,7 @@ function buildProductCard(products, containerId) {
         descriptionContainer.classList.add('card-info');
 
         const price = document.createElement('p');
-        price.innerText = product.price;
+        price.innerText = product.discountedPrice ?? product.price;
         descriptionContainer.appendChild(price);
         card.appendChild(descriptionContainer);
 

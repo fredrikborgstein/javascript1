@@ -1,12 +1,14 @@
 import { fetchAllProducts } from '../utils/apiFunctions.js';
 import { buildAllProducts } from '../utils/products.js';
 import Toaster from "../components/toaster.js";
+import Spinner from "../components/spinner.js";
 
 const genreFilter = document.getElementById('genre');
 const sortBy = document.getElementById('sortby');
 const searchBox = document.getElementById('search');
 const clearFilterBtn = document.getElementById('clear-filter');
 const toast = new Toaster();
+const spinner = new Spinner('#product-grid');
 let allProducts = [];
 let filteredProducts = [];
 
