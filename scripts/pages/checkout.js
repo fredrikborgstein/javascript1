@@ -6,25 +6,13 @@ import {getProductDetails} from "../utils/utils.js";
 const toast = new Toaster();
 const modal = new Modal();
 
-const nameInput = document.getElementById("full-name");
-const emailInput = document.getElementById("email-address");
-const phoneInput = document.getElementById("phone-number");
-const addressInput = document.getElementById("street-address");
-const zipInput = document.getElementById("zip-code");
-const cityInput = document.getElementById("city-input");
-const termsCheckbox = document.getElementById("terms");
 const submitBtn = document.getElementById("checkout-btn");
 const cartSummary = document.getElementById("cart-summary");
 const priceP = document.getElementById("pay-price");
 const normalShippingBtn = document.getElementById("normal");
 const expressShippingBtn = document.getElementById("express");
 
-const name = nameInput.value;
-const email = emailInput.value;
-const phone = phoneInput.value;
-const address = addressInput.value;
-const zipCode = zipInput.value;
-const cityCode = cityInput.value;
+
 let shipping = 'normal';
 const purchaseId = Math.random().toString(36);
 const totalPrice = getCartTotalPrice();
@@ -47,6 +35,21 @@ async function updateProductSummary() {
 
 submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
+    const nameInput = document.getElementById("full-name");
+    const emailInput = document.getElementById("email-address");
+    const phoneInput = document.getElementById("phone-number");
+    const addressInput = document.getElementById("street-address");
+    const zipInput = document.getElementById("zip-code");
+    const cityInput = document.getElementById("city-input");
+    const termsCheckbox = document.getElementById("terms");
+
+
+    const name = nameInput.value;
+    const email = emailInput.value;
+    const phone = phoneInput.value;
+    const address = addressInput.value;
+    const zipCode = zipInput.value;
+    const cityCode = cityInput.value;
 
     if (!termsCheckbox.checked) {
         toast.show('You need to accept the terms and conditions', 'error');

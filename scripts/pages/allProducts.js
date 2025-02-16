@@ -1,18 +1,18 @@
 import { fetchAllProducts } from '../utils/apiFunctions.js';
 import { buildAllProducts } from '../utils/products.js';
+import Toaster from "../components/toaster.js";
 
 const genreFilter = document.getElementById('genre');
 const sortBy = document.getElementById('sortby');
 const searchBox = document.getElementById('search');
 const clearFilterBtn = document.getElementById('clear-filter');
+const toast = new Toaster();
 let allProducts = [];
 let filteredProducts = [];
 
 async function initAllProductsPage() {
     try {
         const productsData = await fetchAllProducts();
-
-        console.log('productsData:', productsData);
 
         if (productsData && productsData.data) {
             allProducts = productsData.data;
@@ -21,10 +21,10 @@ async function initAllProductsPage() {
             buildAllProducts(allProducts);
             populateGenreDropDown(allProducts);
         } else {
-            console.warn('No products data received or data is empty.');
+            toast.show('No products data received or data is empty.', 'warning')
         }
     } catch (error) {
-        console.error('Error initializing all products page:', error);
+        toast.show(`Error initializing all products page: ${error.message}`, 'error');
     }
 }
 
