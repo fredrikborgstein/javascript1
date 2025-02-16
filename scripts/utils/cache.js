@@ -1,5 +1,8 @@
+import Toaster from "../components/toaster.js";
+
 const CACHE_EXPIRATION = 60 * 60 * 1000;
 const ALL_PRODUCTS_CACHE_KEY = 'allProducts';
+const toast = new Toaster();
 
 function isCacheValid(cacheKey, expirationTime = CACHE_EXPIRATION) {
     const cachedTimestamp = localStorage.getItem(`${cacheKey}-timestamp`);
@@ -22,7 +25,7 @@ function getCache(cacheKey) {
     try {
         return JSON.parse(cachedData);
     } catch (error) {
-        console.error(`Error parsing cached data for key "${cacheKey}":`, error);
+        toast.show(`Error parsing cached data for key "${cacheKey}": ${error.message}`, 'error')
         localStorage.removeItem(cacheKey);
         localStorage.removeItem(`${cacheKey}-timestamp`);
         return null;
@@ -35,8 +38,7 @@ export function cacheAllProducts(data) {
         localStorage.setItem(ALL_PRODUCTS_CACHE_KEY, JSON.stringify(data));
         localStorage.setItem(`${ALL_PRODUCTS_CACHE_KEY}-timestamp`, Date.now().toString());
     } catch (error) {
-        console.error('Error caching all products:', error);
-
+        toast.show(`Error caching all products: ${error.message}`, 'error');
     }
 }
 
@@ -45,8 +47,7 @@ export function cacheOneProduct(data, productId) {
         localStorage.setItem(productId, JSON.stringify(data));
         localStorage.setItem(`${productId}-timestamp`, Date.now().toString());
     } catch (error) {
-        console.error(`Error caching product with ID "${productId}":`, error);
-
+        toast.show(`Error caching product with ID: ${productId} -  ${error.message}`, 'error');
     }
 }
 
@@ -62,6 +63,6 @@ export function getAllProductsCache() {
     return getCache(ALL_PRODUCTS_CACHE_KEY);
 }
 
-export function getOneProduct(productId) {
+export function getOneProductFromCache(productId) {
     return getCache(productId);
 }

@@ -1,4 +1,7 @@
 import {getCartTotalPrice} from "./cart.js";
+import Toaster from "../components/toaster.js";
+
+const toast = new Toaster();
 
 export function buildAllProducts(products) {
     const productContainer = document.getElementById('product-grid');
@@ -51,10 +54,9 @@ export function buildProductPage(product) {
 
 function buildProductCard(products, containerId) {
     const container = document.getElementById(containerId);
-    console.log('products', products);
 
     if (!container) {
-        console.error(`Container with ID "${containerId}" not found.`);
+        toast.show(`Container with ID "${containerId}" not found.`, 'error');
         return;
     }
 

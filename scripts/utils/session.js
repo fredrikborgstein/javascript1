@@ -7,11 +7,10 @@ const sessionId =  Math.random().toString(36);
 export default function initSession() {
     if (!checkSession()) {
            modal.show({
-               title: 'Hello world',
-               message: 'Welcome to Gamehub!',
+               title: 'Welcome to Gamehub!',
+               message: 'Join us as a member today, and receive excellent benefits, discounts and more!',
                confirmText: 'Ok',
                onConfirm: () => {
-                   console.log('hello');
                },
            });
 

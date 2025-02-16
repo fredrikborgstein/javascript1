@@ -3,7 +3,7 @@ import {buildProductPage} from "../utils/products.js";
 import Toaster from "../components/toaster.js";
 import {addToCart} from "../utils/cart.js";
 
-const toaster = new Toaster();
+const toast = new Toaster();
 
 function getProductIdFromUrl() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -30,6 +30,7 @@ const addToCartBtn = document.getElementById("purchase-button");
 addToCartBtn.addEventListener("click", async (e) => {
     e.preventDefault();
     addToCart(cartData.productId, cartData.price);
+    toast.show("Added to cart!", 'success');
 })
 
 

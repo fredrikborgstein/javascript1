@@ -45,7 +45,7 @@ export default class Toaster {
             color: ${color};
             padding: 20px 40px;
             border-radius: 5px;
-            font-size: 1.2rem;
+            font-size: 1rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             opacity: 0;
             transform: translateY(20px);

@@ -1,7 +1,7 @@
 import { fetchAllProducts } from './utils/apiFunctions.js';
 import initSession from './utils/session.js';
 import { buildBestsellers, buildNewReleases } from './utils/products.js';
-import {becomeMemberForm, loadHeaderAndFooter, subscribeToNewsletter} from './utils/utils.js';
+import {becomeMemberForm, loadHeaderAndFooter, submitContactForm, subscribeToNewsletter} from './utils/utils.js';
 import { getCartFromStorage } from './utils/cart.js';
 import Toaster from "./components/toaster.js";
 
@@ -56,6 +56,11 @@ async function initPage() {
                 event.preventDefault();
                 becomeMemberForm();
             })
+        } else if(window.location.pathname === '/contact.html') {
+            document.getElementById('contact-form-button').addEventListener('click', event => {
+                event.preventDefault();
+                submitContactForm();
+            });
         }
     } catch (error) {
         toast.show(error.message, 'error');

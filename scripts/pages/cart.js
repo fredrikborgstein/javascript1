@@ -8,6 +8,7 @@ import {
 } from "../utils/cart.js";
 import {getOneProduct} from "../utils/apiFunctions.js";
 import {buildCart} from "../utils/products.js";
+import {getProductDetails} from "../utils/utils.js";
 
 const cartContainer = document.getElementById('cart-content');
 const cartItems = document.getElementById('cart-items');
@@ -19,29 +20,17 @@ cartContainer.innerHTML = '';
 cartItems.innerHTML = '';
 cartPrice.innerHTML = '';
 
-async function getProductDetails(cartData) {
-    const cartProducts = [];
-
-    for (const item of cartData) {
-        try {
-            const product = await getOneProduct(item.productId);
-            if (product) {
-                cartProducts.push({ ...product, quantity: item.quantity });
-            } else {
-                console.warn(`Product with ID ${item.productId} not found.`);
-            }
-        } catch (error) {
-            console.error(`Error fetching product details for ID ${item.productId}:`, error);
-        }
-    }
-
-    return cartProducts;
-}
 
 function addEventListeners() {
     const removeBtns = document.querySelectorAll('.remove-btn');
     const increaseBtns = document.querySelectorAll('.increase-btn');
     const decreaseBtns = document.querySelectorAll('.decrease-btn');
+    const checkoutBtn = document.getElementById('checkout-btn');
+
+    checkoutBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = '/checkout.html';
+    })
 
     removeBtns.forEach(el => {
         el.addEventListener('click', async(e) => {

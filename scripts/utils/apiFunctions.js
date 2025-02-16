@@ -1,5 +1,12 @@
 import Toaster from '../components/toaster.js';
-import {cacheAllProducts, checkAllProductsCache, getAllProductsCache,} from './cache.js';
+import {
+    cacheAllProducts,
+    cacheOneProduct,
+    checkAllProductsCache,
+    checkOneProduct,
+    getAllProductsCache,
+    getOneProductFromCache,
+} from './cache.js';
 
 const apiUrl = 'https://v2.api.noroff.dev/gamehub';
 const toast = new Toaster();
@@ -30,13 +37,15 @@ export async function fetchAllProducts() {
         return response;
     } catch (error) {
         toast.show(error.message, 'error');
-        console.error('Error fetching all products:', error);
         throw error;
     }
 }
 
 export async function getOneProduct(productId) {
     try {
+        if (checkOneProduct(productId)) {
+            return getOneProductFromCache(productId);
+        }
         const request = await fetch(`${apiUrl}/${productId}`, {
             method: 'GET',
             headers: {
@@ -48,13 +57,14 @@ export async function getOneProduct(productId) {
         if (!request.ok) {
             const message = `HTTP error! Status: ${request.status}`;
             toast.show(message, 'error');
-            throw new Error(message);
         }
 
-        return await request.json();
+        const response = await request.json();
+        cacheOneProduct(response, productId);
+
+        return await response;
     } catch (error) {
         toast.show(error.message, 'error');
-        console.error(`Error fetching product with ID "${productId}":`, error);
         throw error;
     }
 }

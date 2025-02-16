@@ -229,3 +229,8 @@ a:hover {
     width: 250px;
   }
 }
+
+#cart-summary {
+  display: flex;
+  flex-direction: column;
+}

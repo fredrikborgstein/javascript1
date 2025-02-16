@@ -151,7 +151,7 @@ footer a {
   margin-bottom: 10px;
 }
 
-#email-input {
+#email-input, .form-control {
   width: 250px;
   padding: 10px;
   border-radius: 5px;
@@ -159,6 +159,11 @@ footer a {
   background-color: white;
   color: black;
   border-radius: 5px;
+}
+
+.form-control {
+  margin: 10px 0;
+  border: 1px solid black;
 }
 
 #mobile-menu-container {

@@ -78,3 +78,8 @@ export function getCartTotalPrice() {
 
     return total;
 }
+
+export function emptyCart() {
+    localStorage.removeItem(CART_STORAGE_KEY);
+}
+

@@ -19,6 +19,7 @@
       src="https://kit.fontawesome.com/7a5a56048c.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/pages/checkout.js" type="module"></script>
     <title>GameHub - Checkout</title>
   </head>
   <body>
@@ -35,15 +36,15 @@
             <h2>Shipping And Billing Information</h2>
           </div>
           <div id="shipping-select">
-            <button class="active" type="button">
+            <button class="active" type="button" id="normal">
               <i class="fa-regular fa-circle-check"></i>Normal
             </button>
-            <button type="button">
+            <button type="button" id="express">
               <i class="fa-regular fa-circle"></i>Express
             </button>
           </div>
           <div id="shipping-form">
-            <form action="#" method="post">
+            <form>
               <div class="form-group">
                 <label for="full-name">Full name</label>
                 <input type="text" id="full-name" name="full-name" required />
@@ -91,20 +92,14 @@
           <div id="summary-heading">
             <h2>Cart Summary</h2>
           </div>
-          <div class="wrapper">
-            <div id="summary-img">
-              <img src="../images/GameHubcovers.webp" alt="Product Image" />
-            </div>
-            <div id="summary-details">
-              <p>1 x Ping Pong Championship - Playbox</p>
-              <p>Price per item: 19.90 $ incl VAT</p>
-            </div>
+          <div class="wrapper" id="cart-summary">
+
           </div>
           <div id="summary-price">
-            <p>Total: 19.90 $ incl VAT</p>
+            <p id="pay-price"></p>
           </div>
           <div id="summary-btn" class="btn-div">
-            <a class="btn checkout-btn" href="checkout-success.html">
+            <a class="btn checkout-btn" href="#" id="checkout-btn">
               Pay now
             </a>
           </div>
