@@ -106,7 +106,7 @@ export async function generateFeaturedSection(genre, productId) {
                     <p>${game.price} $</p>
                 </div>
                 <div class="card-button">
-                    <a href="/productpage.html?id=${game.id}" class="card-text">View Details</a>
+                    <a href="/product.html?id=${game.id}" class="card-text">View Details</a>
                 </div>
             `;
             featuredGrid.appendChild(card);
