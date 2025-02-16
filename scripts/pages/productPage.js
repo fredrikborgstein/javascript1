@@ -16,6 +16,7 @@ async function initProductPage() {
     const price = product.data.discountedPrice ?? product.data.price;
     buildProductPage(product.data);
     const genre = product.data.genre;
+    document.title = `Gamehub - ${product.data.title}`;
 
     const cartData = {productId, price};
 
