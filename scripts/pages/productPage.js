@@ -32,8 +32,54 @@ async function initProductPage() {
 const cartData =  await initProductPage();
 
 const addToCartBtn = document.getElementById("purchase-button");
+let cartAdded = false;
+
 addToCartBtn.addEventListener("click", async (e) => {
     e.preventDefault();
-    addToCart(cartData.productId, cartData.price);
-    toast.show("Added to cart!", 'success');
-})
+
+    if (cartAdded) {
+        return;
+    }
+
+    try {
+        await addToCartHandler(cartData.productId, cartData.price);
+        updateButtonState("success");
+        cartAdded = true;
+        setTimeout(resetButtonState, 3000);
+    } catch (error) {
+        toast.show("Failed to add to cart. Please try again.", "error");
+    }
+});
+
+function addToCartHandler(productId, price) {
+    try {
+        addToCart(productId, price);
+        toast.show("Added to cart!", "success");
+    } catch (error) {
+        toast.show("Failed to add to cart. Please try again.", "error");
+        throw error;
+    }
+}
+
+function updateButtonState(state) {
+    if (state === "success") {
+        addToCartBtn.innerHTML =
+            '<i class="fa-regular fa-circle-check" style="color:black;margin-right:4px;"></i>Added to cart!';
+        addToCartBtn.style.background = "green";
+        addToCartBtn.disabled = true;
+    } else if (state === "reset") {
+        addToCartBtn.innerHTML =
+            '<i class="fa-solid icon fa-cart-shopping" style="color: black; margin-right: 4px;"></i>Go to cart';
+        addToCartBtn.style.background = "#cfa616";
+    }
+}
+
+function resetButtonState() {
+    updateButtonState("reset");
+    addToCartBtn.disabled = false;
+
+    addToCartBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = "/cart.html";
+    });
+}
