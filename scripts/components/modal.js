@@ -50,9 +50,12 @@ export default class Modal {
         `;
         this.modalClose.onclick = () => this.close();
 
+        this.modalHtml = document.createElement('div'); // Keep this
+
         this.modalContent.appendChild(this.modalClose);
         this.modalContent.appendChild(this.modalTitle);
         this.modalContent.appendChild(this.modalMessage);
+        this.modalContent.appendChild(this.modalHtml);
         this.modalContent.appendChild(this.modalActions);
         this.modal.appendChild(this.modalContent);
         document.body.appendChild(this.modal);
@@ -61,6 +64,7 @@ export default class Modal {
     show({
              title = 'Modal Title',
              message = 'This is a modal message.',
+             html, // Expect a DOM element
              confirmText,
              cancelText,
              onConfirm,
@@ -107,6 +111,16 @@ export default class Modal {
                 this.close();
             };
             this.modalActions.appendChild(cancelButton);
+        }
+
+        // Clear existing content
+        while (this.modalHtml.firstChild) {
+            this.modalHtml.removeChild(this.modalHtml.firstChild);
+        }
+
+        // Append the HTML element
+        if (html) {
+            this.modalHtml.appendChild(html); // Append the DOM element
         }
 
         this.modal.classList.remove('hidden');

@@ -13,20 +13,23 @@ function getProductIdFromUrl() {
 async function initProductPage() {
     const productId = getProductIdFromUrl();
     const product = await getOneProduct(productId);
+    const price = product.data.discountedPrice ?? product.data.price;
     buildProductPage(product.data);
     const genre = product.data.genre;
 
+    const cartData = {productId, price};
+
     await generateFeaturedSection(genre, productId);
-    return productId;
+    return cartData;
 
 }
 
-const productId =  await initProductPage();
+const cartData =  await initProductPage();
 
 const addToCartBtn = document.getElementById("purchase-button");
 addToCartBtn.addEventListener("click", async (e) => {
     e.preventDefault();
-    addToCart(productId);
+    addToCart(cartData.productId, cartData.price);
 })
 
 

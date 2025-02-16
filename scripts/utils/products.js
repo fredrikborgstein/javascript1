@@ -1,3 +1,4 @@
+import {getCartTotalPrice} from "./cart.js";
 
 export function buildAllProducts(products) {
     const productContainer = document.getElementById('product-grid');
@@ -113,7 +114,6 @@ export function buildCart(products) {
     const cartItems = document.getElementById('cart-items');
     const cartPrice = document.getElementById('cart-price');
 
-    let totalPrice = 0;
     for (const product of products) {
         const productData = product.data;
 
@@ -142,6 +142,7 @@ export function buildCart(products) {
         const quantityContainer = document.createElement('div');
         quantityContainer.classList.add('quantity');
         const quantityCounter = document.createElement('p');
+        quantityCounter.classList.add('quantity-counter');
         quantityCounter.innerText = `Quantity: ${product.quantity}`;
         quantityContainer.append(quantityCounter);
 
@@ -150,7 +151,6 @@ export function buildCart(products) {
         const price = document.createElement('p');
         price.innerText = `Price: ${productData.price} $`;
         priceContainer.append(price);
-        totalPrice += (parseFloat(productData.price) * parseInt(product.quantity));
 
         const controlContainer = document.createElement('div');
         controlContainer.classList.add('control');
@@ -173,6 +173,7 @@ export function buildCart(products) {
     }
 
     const priceSummary = document.createElement('p');
+    const totalPrice = getCartTotalPrice();
     const roundedPrice = parseFloat(totalPrice.toFixed(2));
     priceSummary.classList.add('price-summary');
     priceSummary.innerText = `Total price ${roundedPrice} $`;

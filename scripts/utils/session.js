@@ -2,6 +2,7 @@ import Modal from "../components/modal.js";
 import {initCart} from "./cart.js";
 
 const modal = new Modal();
+const sessionId =  Math.random().toString(36);
 
 export default function initSession() {
     if (!checkSession()) {
@@ -26,21 +27,21 @@ function checkSession() {
 }
 
 function setSession() {
-    return sessionStorage.setItem('session', 'true');
+    return sessionStorage.setItem('session', sessionId);
 }
 
-function checkIsMember() {
-    return sessionStorage.getItem('isMember');
+export function checkIsMember(email) {
+    return sessionStorage.getItem(`isMember-${email}`) !== null;
 }
 
-function setIsMember() {
-    return sessionStorage.setItem('isMember', 'true');
+export function setIsMember(email, name) {
+    return sessionStorage.setItem(`isMember-${email}`, `Name: ${name}, Email: ${email}`);
 }
 
-function setIsSubToNewsletter() {
-    return sessionStorage.setItem('isSubToNewsletter', 'true');
+export function setIsSubToNewsletter(email) {
+    return sessionStorage.setItem(`isSubbed-${email}`, email);
 }
 
-function checkIsSubToNewsletters() {
-    return sessionStorage.getItem('isSubToNewsletters');
+export function checkIsSubToNewsletters(email) {
+    return  sessionStorage.getItem(`isSubbed-${email}`) !== null;
 }

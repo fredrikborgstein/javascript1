@@ -1,8 +1,12 @@
 import { fetchAllProducts } from './utils/apiFunctions.js';
 import initSession from './utils/session.js';
 import { buildBestsellers, buildNewReleases } from './utils/products.js';
-import { loadHeaderAndFooter } from './utils/utils.js';
+import {becomeMemberForm, loadHeaderAndFooter, subscribeToNewsletter} from './utils/utils.js';
 import { getCartFromStorage } from './utils/cart.js';
+import Toaster from "./components/toaster.js";
+
+
+const toast = new Toaster();
 
 function updateCartCount() {
     const cart = getCartFromStorage();
@@ -11,8 +15,6 @@ function updateCartCount() {
     cart.forEach((item) => {
         itemCount += item.quantity;
     });
-
-    console.log('Cart count:', itemCount);
 
     const cartCountElement = document.getElementById('cart-count');
     if (cartCountElement) {
@@ -30,10 +32,10 @@ async function initHomePage() {
             buildBestsellers(products.data);
             buildNewReleases(products.data);
         } else {
-            console.warn('No products data received or data is empty.');
+            toast.show('No products found.', 'error');
         }
     } catch (error) {
-        console.error('Error initializing home page:', error);
+        toast.show(error.message, 'error');
     }
 }
 
@@ -46,9 +48,17 @@ async function initPage() {
 
         if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
             await initHomePage();
+            document.getElementById('members-section-btn').addEventListener('click', event => {
+                event.preventDefault();
+                becomeMemberForm();
+            });
+            document.getElementById('hero-btn').addEventListener('click', event => {
+                event.preventDefault();
+                becomeMemberForm();
+            })
         }
     } catch (error) {
-        console.error('Error initializing page:', error);
+        toast.show(error.message, 'error');
     }
 }
 
@@ -56,9 +66,12 @@ async function initPage() {
     document.addEventListener('DOMContentLoaded', async () => {
         try {
             await initPage();
-            console.log('Page initialized successfully.');
+            document.getElementById('newsletter-button').addEventListener('click',  (e) => {
+                e.preventDefault();
+                subscribeToNewsletter();
+            });
         } catch (error) {
-            console.error('Error during page initialization:', error);
+            toast.show(error.message, 'error');
         }
     });
 })();
