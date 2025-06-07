@@ -25,7 +25,7 @@ export function buildProductPage(product) {
     }
 
     image.src = product.image.url;
-    image.alt = product.image.alt;
+    image.alt = product.image.alt ? product.image.alt : product.title;
 
     if (product.onSale) {
         title.innerHTML += `<span style="background-color: yellow; color: black; font-size: 0.8em; padding: 4px 10px; border-radius: 3px; margin-left: 5px; vertical-align: middle; display: inline-block; font-weight: bold;">On Sale!</span>`;
@@ -75,7 +75,7 @@ function buildProductCard(products, containerId) {
         imageContainer.classList.add('card-image');
         const image = document.createElement('img');
         image.src = product.image.url;
-        image.alt = product.image.alt;
+        image.alt = product.image.alt ? product.image.alt : product.title;
         imageContainer.appendChild(image);
         card.appendChild(imageContainer);
 
